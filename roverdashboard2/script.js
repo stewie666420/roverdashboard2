@@ -1,6 +1,6 @@
 const API_KEY = "b2084c37a6ac5e6e8dc1f5d898ec3cf8";
 const SUBDOMAIN = "roverkennels";
-const LOCATION_ID = "santa-monica";
+const LOCATION_ID = "santamonica";
 
 async function fetchDogs() {
   const url = `https://${SUBDOMAIN}.gingrapp.com/api/v1/back_of_house?key=${API_KEY}&location_id=${LOCATION_ID}&full_day=true`;
@@ -80,6 +80,7 @@ function adjustScrollSpeed(dogCount) {
 // Initial fetch + every minute refresh
 fetchDogs();
 setInterval(fetchDogs, 60000);
+
 
 
 
