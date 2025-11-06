@@ -1,0 +1,93 @@
+/* GENERAL PAGE STYLE */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  overflow: hidden; /* Prevent scrollbar from showing */
+}
+
+header {
+  background: #ffffff;
+  padding: 18px;
+  text-align: center;
+  border-bottom: 2px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* LAST UPDATED LABEL */
+#lastUpdated {
+  margin-top: 5px;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+/* SCROLLING CONTAINER */
+#scrollContainer {
+  height: calc(100vh - 110px);
+  overflow: hidden;
+  position: relative;
+}
+
+/* DOG GRID — THIS ELEMENT WILL SCROLL */
+#dogContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  padding: 20px;
+  gap: 20px;
+  animation: scrollList 25s linear infinite;
+}
+
+/* AUTO-SCROLL ANIMATION */
+@keyframes scrollList {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+/* DOG CARD STYLE */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.card img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #eee;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* ✅ Check-in Time Now Larger + Bold */
+.card .checkin {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* ✅ Type Differentiation (Daycare vs Boarding) */
+.daycare {
+  color: #009c2f;   /* green */
+}
+
+.boarding {
+  color: #0057ff;   /* blue */
+}
