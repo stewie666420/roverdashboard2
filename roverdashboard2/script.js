@@ -1,4 +1,4 @@
-const API_KEY = "b2084c37a6ac5e6e8dc1f5d898ec3cf8";
+const API_KEY = "79f7d0eb3513bf810fb65e4f135014d8";
 const SUBDOMAIN = "roverkennels";
 const LOCATION_ID = "1";
 
@@ -80,6 +80,7 @@ function adjustScrollSpeed(dogCount) {
 // Initial fetch + every minute refresh
 fetchDogs();
 setInterval(fetchDogs, 60000);
+
 
 
 
